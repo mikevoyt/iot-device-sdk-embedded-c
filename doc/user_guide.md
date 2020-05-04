@@ -250,7 +250,7 @@ This callback function is for environments with severe memory restrictions. For 
 
 ### Step 6: Disconnect and shut down
 
-To disconnect from Cloud IoT Core, invoke the **`iotc_shutdown_connection()`** function. This function enqueues an event that cleanly closes the socket connection. After the connection is terminated, the Device SDK invokes the [connect callback](#Step 2: Connect) function.
+To disconnect from Cloud IoT Core, invoke the **`iotc_shutdown_connection()`** function. This function enqueues an event that cleanly closes the socket connection. After the connection is terminated, the Device SDK invokes the [connect callback](#step-2-connect) function.
 
 Note: Do not delete the context until the the connect callback is invoked.
 
@@ -258,9 +258,9 @@ Note: Do not delete the context until the the connect callback is invoked.
 
 The Device SDK checks the parameters of the connect callback function to determine if a device was intentionally or incidentally disconnected. See the [**Connect callback**](#connect-callback) section for more information.
 
-If an error disconnects a device, the client application can safely and immediately call **`iotc_connect()`** from within the connect callback function itself, using the same context that was just disconnected. This ques a new [connection request](#step-2:-connect).
+If an error disconnects a device, the client application can safely and immediately call **`iotc_connect()`** from within the connect callback function itself, using the same context that was just disconnected. This ques a new [connection request](#step-2-connect).
 
-If a client application intentionally closes a connection, it retains the [existing context](#step-1:-create-a-context) and invokes the connect function again later.
+If a client application intentionally closes a connection, it retains the [existing context](#step-1-create-a-context) and invokes the connect function again later.
 
 #### Freeing memory and shutting down
 
