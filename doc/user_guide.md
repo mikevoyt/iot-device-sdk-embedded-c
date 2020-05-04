@@ -228,7 +228,7 @@ Incoming messages include the topic data as part of the callback parameters. Spe
 
 #### QoS level
 
-The [specified QoS level](#MQTT v3.1.1) is the maximum QoS level of incoming messages. For instance, if you set the QoS level to 0, QoS 1 messages are downgraded to QoS 0. 
+The [specified QoS level](#mqtt-v3.1.1) is the maximum QoS level of incoming messages. For instance, if you set the QoS level to 0, QoS 1 messages are downgraded to QoS 0. 
 
 The QoS level also affects the Device SDK's memory overhead. QoS 2 messages use the most memory overhead, while QoS 0 messages use the least.
 
