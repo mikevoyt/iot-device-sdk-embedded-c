@@ -260,7 +260,7 @@ The Device SDK checks the parameters of the connect callback function to determi
 
 If an error disconnects a device, the client application can safely and immediately call **`iotc_connect()`** from within the connect callback function itself, using the same context that was just disconnected. This ques a new [connection request](#Step 2: Connect).
 
-If a client application intentionally closes a connection, it retains the [existing context](#Step 1: Create a context) and invokes the connect function again later.
+If a client application intentionally closes a connection, it retains the [existing context](#Step1:Createacontext) and invokes the connect function again later.
 
 #### Freeing memory and shutting down
 
